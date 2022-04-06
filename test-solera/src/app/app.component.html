@@ -1,0 +1,16 @@
+<app-header (onCategorySelected)="onCategorySelected($event)" (onAllProducts)="onAllProducts($event)" (onNewProduct)="onNewProduct()"></app-header>
+<div class="main">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let product of productList">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.title}}</h5>
+                  <p class="card-text" >{{product.description}}</p>
+                  <p><span>Price: {{product.price | currency: 'S/.': 'symbol':''}}</span></p>
+                  <button mat-raised-button color="primary" (click)="onEditProduct(product)">Editar</button>
+                  <button mat-raised-button color="warn" (click)="onDeleteProduct(product)">Eliminar</button>
+                </div>
+              </div>              
+        </div>
+      </div>
+</div>

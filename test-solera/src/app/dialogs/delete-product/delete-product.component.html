@@ -1,0 +1,8 @@
+<mat-dialog-content>
+    <h5>¿Está seguro de querer elimimar el producto?</h5>
+    <p><span>{{product.title}}</span></p>    
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="warn"(click)="onCloseModal(false)">NO</button>
+    <button mat-raised-button color="primary" (click)="onDeleteProduct()">SI</button>
+</mat-dialog-actions>
