@@ -8,6 +8,8 @@ export const environment = {
       productId: '/api/products/{id}',
       productUpdate: '/api/products/{id}',
       productDelete: '/api/products/{id}',
+      productsByCategory: '/api/categories/',
+      deleteProduct: '/api/products/',
 
       categories: '/api/categories',
 
